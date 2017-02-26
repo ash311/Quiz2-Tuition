@@ -6,7 +6,7 @@ import java.math.*;
 public class Quiz2Q1 {
 
 			private static double tuition;
-			private static int totalcost = 0;
+			private static double totalcost = 0;
 			private static int year = 0;
 
 			private static double tuition_rate_inc;
@@ -33,6 +33,6 @@ public class Quiz2Q1 {
 				
 			}
 			
-			System.out.printf ("The total cost of tuition for a four-year degree is $" + totalcost);
+			System.out.printf ("The total cost of tuition for a four-year degree is $%.2f", totalcost);
 		}
 	}
