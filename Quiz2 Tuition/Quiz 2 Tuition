@@ -1,0 +1,38 @@
+package main;
+
+import java.util.Scanner;
+import java.math.*;
+
+public class Quiz2Q1 {
+
+			private static double tuition;
+			private static int totalcost = 0;
+			private static int year = 0;
+
+			private static double tuition_rate_inc;
+			
+			private static Scanner input = new Scanner(System.in);
+			
+			public static void main(String[] args) {
+				
+				System.out.print("What is the current yearly cost of tuition?");
+				double tuition = input.nextDouble();
+				
+				System.out.print("What is the rate at which tuition increases? Please enter the percentage.");
+				double tuition_rate_inc = input.nextDouble();
+				
+				input.close();
+				
+
+			
+				for (int i= 1; i<5; i++) {
+				
+					tuition = ((tuition * Math.pow(1+tuition_rate_inc/100.0, year)));
+					totalcost += tuition;
+					year += 1;
+				
+			}
+			
+			System.out.printf ("The total cost of tuition for a four-year degree is $" + totalcost);
+		}
+	}
